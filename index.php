@@ -1,9 +1,9 @@
 <?php
 /**
- * URL: http://rcox.greenriverdev.com/IT328/pets/index.php
- * Authors: Robert Cox, Scarlett Kim
+ * URL: http://rcox.greenriverdev.com/IT328/food/index.php
+ * Authors: Robert Cox
  * Version: 1.0
- * Date: 1/817/20
+ * Date: 1/22/20
  *
  **/
 ini_set('display_errors', 1);
@@ -14,6 +14,11 @@ $fff = Base::instance();
 $fff->route("GET /", function (){
     $view = new Template();
     echo $view->render("views/home.html");
+});
+
+$fff->route("GET /breakfast", function (){
+    $view = new Template();
+    echo $view->render("views/breakfast.html");
 });
 $fff->run();
 ?>
