@@ -20,6 +20,22 @@ $fff->route("GET /breakfast", function (){
     $view = new Template();
     echo $view->render("views/breakfast.html");
 });
+
+$fff->route("GET /lunch", function (){
+    $view = new Template();
+    echo $view->render("views/lunch.html");
+});
+
+$fff->route("GET /order", function (){
+    $view = new Template();
+    echo $view->render("views/form1.html");
+});
+
+$fff->route("GET /@item", function ($fff, $params){
+    //var_dump($params);
+    $item = $params["item"];
+    echo "<h1>$item!</h1>";
+});
 $fff->run();
 ?>
 <!doctype html>
